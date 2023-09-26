@@ -54,6 +54,9 @@ def billboard_hack():
                 corresponding_point = H.dot(point)
                 corresponding_point /= corresponding_point[-1]
                 # Perform bilinear interpolation for new intensity
+
+                # TRY 
+                # Ihack[y][x] = bilinear_interp(equalized_Ist, corresponding_point[:-1]) 
                 Ihack[y][x] = bilinear_interp(equalized_Ist, corresponding_point[:-1, :])  
     
     #------------------
