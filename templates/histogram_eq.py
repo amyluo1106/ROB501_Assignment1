@@ -1,5 +1,4 @@
 import numpy as np
-from imageio import imread
 
 def histogram_eq(I):
     """
@@ -41,9 +40,3 @@ def histogram_eq(I):
     #------------------
 
     return J
-
-if __name__ == "__main__":
-    Ist = imread('../rob501_assignment_1/billboard/uoft_soldiers_tower_dark.png')
-    Ist = np.asarray(Ist)
-
-    histogram_eq(Ist)
