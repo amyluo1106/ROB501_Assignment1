@@ -26,8 +26,8 @@ def billboard_hack():
     Ist_pts = np.array([[2, 218, 218, 2], [2, 2, 409, 409]])
 
     #FIX PATH
-    Iyd = imread('../rob501_assignment_1/billboard/yonge_dundas_square.jpg')
-    Ist = imread('../rob501_assignment_1/billboard/uoft_soldiers_tower_dark.png')
+    Iyd = imread('../billboard/yonge_dundas_square.jpg')
+    Ist = imread('../billboard/uoft_soldiers_tower_dark.png')
 
     Ihack = np.asarray(Iyd)
     Ist = np.asarray(Ist)
@@ -55,9 +55,7 @@ def billboard_hack():
                 corresponding_point /= corresponding_point[-1]
                 # Perform bilinear interpolation for new intensity
 
-                # TRY 
-                # Ihack[y][x] = bilinear_interp(equalized_Ist, corresponding_point[:-1]) 
-                Ihack[y][x] = bilinear_interp(equalized_Ist, corresponding_point[:-1, :])  
+                Ihack[y][x] = bilinear_interp(equalized_Ist, corresponding_point[:-1]) 
     
     #------------------
 
