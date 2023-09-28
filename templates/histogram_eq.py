@@ -34,9 +34,6 @@ def histogram_eq(I):
     # Map the cumulative distribution values to the image to perform equalization
     J = c[I]
 
-    # Convert the resulting image to 8-bit (0-255) range
-    J = np.uint8(J)
-
     #------------------
 
     return J
